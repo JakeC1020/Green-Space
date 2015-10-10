@@ -7,9 +7,18 @@
 <header>
 	<% include ../partials/header %>
 </header>
-
-<footer>
-	<% include ../partials/footer %>
-</footer>
+<div class="container">
+	<h1 class="page-header">My Challenges</h1>
+	<!-- FOR EACH challenge from DATABASE -->
+	<div class="row">
+		<div class="col-sm-10">
+			<h2><!-- DATABASE challenge name--></h2>
+			<p><!-- DATABASE challenge description --></p>
+		</div>
+	</div>
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+</div>
 </body>
 </html>

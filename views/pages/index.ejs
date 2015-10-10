@@ -7,9 +7,22 @@
 <header>
 	<% include ../partials/header %>
 </header>
-
-<footer>
-	<% include ../partials/footer %>
-</footer>
+<!-- IF user is logged in, else redirect to login page -->
+<div class="container">
+	<div class="row">
+		<div class="news-feed-column col-md-8">
+			<h1 class="page-header">News Feed</h1>
+			<!-- DATABASE pull and format user news -->
+		</div>
+		<div class="challenges-column col-md-4">
+			<h1 class="page-header"><a href="/challenges">Challenges</a></h1>
+			<!-- DATABASE pull challenges for user -->
+		</div>
+	</div>
+	
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+</div
 </body>
 </html>
