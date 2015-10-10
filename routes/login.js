@@ -16,7 +16,7 @@ module.exports = function(db) {
     
     },
     post: function(req, res) {
-      var user = req.body.username;
+      var user = req.body.email;
       var pass = req.body.password;
       
       db.authenticate(user, pass, function(pass) {

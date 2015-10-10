@@ -14,8 +14,28 @@ module.exports = function(db) {
       }
     },
     post: function(req, res) {
-      req.session.loggedIn = true;
-      res.redirect('/');
+      var email = req.body.email;
+      var pass = req.body.password;
+      var repeat = req.body.repeat;
+      var location = req.body.location;
+      // TODO: validate the above for invalid inputs
+      
+      if (pass !== repeat) {
+        req.flash('danger', 'Passwords must match.');
+        res.redirect('/register');
+        return;
+      }
+      
+      db.registerUser(email, pass, location, function(success) {
+        if (success) {
+          req.flash('success', 'Registration successful. Please sign in below.');
+          res.redirect('/login');
+          return;
+        }
+        
+        req.flash('danger', 'Registration failed. Please try again.');
+        res.redirect('/register');
+      });
     }
   };
 
