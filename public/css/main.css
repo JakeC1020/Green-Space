@@ -1,4 +1,29 @@
-.navbar{
+/* .navbar{
     background-color:#26A65B;
-    color:#FFF;
 }
+.nav.navbar.navbar-nav li a{
+    color:#FFF;
+} */
+
+@font-face {
+    font-family: 'jamesfajardo';
+    src: url('../fonts/James_Fajardo.ttf');
+}
+
+.navbar-brand {
+    font-family: 'jamesfajardo', cursive;
+    font-size: 58px;
+    color: #3b6f4b !important;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+.btn-success{
+background:#3B6F4B;
+border-color:#3B6F4B;
+}
+a {
+    color:#3B6F4B;
+}
+a:hover {color:#3B6F4B;}
