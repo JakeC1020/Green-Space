@@ -3,6 +3,10 @@ var bodyParser = require('body-parser');
 module.exports = function(db) {
   var verbs = {
     get: function(req, res) {
+      var loggedIn = req.session.loggedIn;
+      if (loggedIn) {
+        res.redirect("/");
+      }
       res.render('pages/login');
     },
     post: function(req, res) {
