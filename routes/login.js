@@ -26,6 +26,7 @@ module.exports = function(db) {
           return;
         }
         
+        req.flash('danger', 'Unrecognized username or password.');
         res.redirect('/login');
       });
     }

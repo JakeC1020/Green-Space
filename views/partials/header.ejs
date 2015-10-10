@@ -36,3 +36,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<% while (entry = flash.shift()) { %>
+  <div class="alert alert-<%= entry.type%>" role="alert"><%= entry.message %></div>
+<% } %>
