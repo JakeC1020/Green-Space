@@ -1,10 +1,13 @@
 module.exports = function(db) {
   var verbs = {
     get: function(req, res) {
-      var loggedIn = req.session.loggedIn;
-      if (!loggedIn) {
-        res.redirect("/login");
+      var auth = req.session.auth;
+      
+      if (!auth) {
+        res.redirect('/login');
+        return;
       }
+      
       res.render('pages/index');
     }
   };
