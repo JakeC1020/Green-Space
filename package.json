@@ -4,7 +4,8 @@
   "description": "Project for Local Hack Day at the University of Boulder Colorado",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-db": "node scripts/setup-db"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/jakec1020/Green-Space",
   "dependencies": {
+    "async": "^1.4.2",
+    "bcrypt-nodejs": "0.0.3",
     "debug": "^2.2.0",
     "ejs": "^1.0.0",
     "express": "^4.13.3",
