@@ -1,3 +1,5 @@
+var bodyParser = require('body-parser');
+
 module.exports = function(db) {
   var verbs = {
     get: function(req, res) {
@@ -5,9 +7,10 @@ module.exports = function(db) {
     },
     post: function(req, res) {
       req.session.loggedIn = true;
-      res.redirect('/');
+      res.send('OK');
     }
   };
   
-  return { route: '/login', verbs: verbs };
+  var urlencoded = bodyParser.urlencoded({ extended: false })
+  return { route: '/login', middleware: urlencoded, verbs: verbs };
 };

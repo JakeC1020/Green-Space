@@ -9,7 +9,14 @@ module.exports = function(app) {
     
     for (var verb in route.verbs) {
       debug('load ' + verb.toUpperCase() + ' ' + route.route);
-      app[verb](route.route, route.verbs[verb]);
+      
+      var args = [route.route];
+      if (route.middleware) {
+        args.push(route.middleware);
+        debug('applying middleware to route');
+      }
+      args.push(route.verbs[verb]);
+      app[verb].apply(app, args);
     }
   });
 };
