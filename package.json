@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/jakec1020/Green-Space/issues"
   },
-  "homepage": "https://github.com/jakec1020/Green-Space"
+  "homepage": "https://github.com/jakec1020/Green-Space",
+  "dependencies": {
+    "express": "^4.13.3",
+    "mysql": "^2.9.0"
+  }
 }
