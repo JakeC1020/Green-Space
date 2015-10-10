@@ -1,9 +1,9 @@
 module.exports = function(db) {
   var verbs = {
     get: function(req, res) {
-      res.render('views/pages/index');
+      res.render('views/pages/challenges');
     }
   };
   
-  return { route: '/', verbs: verbs };
+  return { route: '/challenges', verbs: verbs };
 };

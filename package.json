@@ -18,6 +18,7 @@
   "homepage": "https://github.com/jakec1020/Green-Space",
   "dependencies": {
     "express": "^4.13.3",
-    "mysql": "^2.9.0"
+    "mysql": "^2.9.0",
+    "ejs": "^1.0.0"
   }
 }
