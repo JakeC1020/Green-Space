@@ -5,7 +5,11 @@ module.exports = function(db) {
       if (!loggedIn) {
         res.redirect("/login");
       }
-      res.render('pages/index');
+      else {
+        res.render('pages/index', {
+          loggedIn: loggedIn
+        });
+      }
     }
   };
   

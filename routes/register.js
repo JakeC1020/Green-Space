@@ -5,7 +5,11 @@ module.exports = function(db) {
       if (loggedIn) {
         res.redirect("/");
       }
-      res.render('pages/register');
+      else {
+        res.render('pages/register', {
+          loggedIn: loggedIn
+        });
+      }
     },
     post: function(req, res) {
       req.session.loggedIn = true;

@@ -13,15 +13,26 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">My Challenges</a></li>
-        <li><a href="#">Leaderboard</a></li>
-        <li><a href="#">Rewards</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Profile</a></li><!-- PUT USER INFO HERE FROM DB -->
+      <% if (true) { %><!-- FIX THIS LATER -->
+        <ul class="nav navbar-nav">
+      
+          <li><a href="/challenges">My Challenges</a></li>
+          <li><a href="/leaderboard">Leaderboard</a></li>
+          <li><a href="/rewards">Rewards</a></li>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/profile">Profile</a></li><!-- PUT USER INFO HERE FROM DB -->
+          </ul>
+        </ul>
+      <% } else { %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+        </ul>
+        <% } %>
         
-      </ul>
+        
+      
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
