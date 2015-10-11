@@ -7,11 +7,14 @@ module.exports = function(db) {
         res.redirect('/login');
         return;
       }
-      else {
+      
+      db.listChallenges(req.session.id, function(list) {
         res.render('pages/index', {
-          loggedIn: auth
+          challenges: list
         });
-      }
+        
+      });
+      
     }
   };
   

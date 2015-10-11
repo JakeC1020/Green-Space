@@ -15,7 +15,10 @@
 		</div>
 		<div class="challenges-column col-md-4">
 			<h1 class="page-header"><a href="/challenges">Challenges</a></h1>
-			<!-- DATABASE pull challenges for user -->
+			<% challenges.forEach(function(challenge) { %>
+  				<div><%= challenge.description %> (difficulty: <%= challenge.difficulty %>)</div>
+			<% }); %>
+
 		</div>
 	</div>
 	

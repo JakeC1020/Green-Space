@@ -19,9 +19,10 @@ module.exports = function(db) {
       var user = req.body.email;
       var pass = req.body.password;
       
-      db.authenticate(user, pass, function(pass) {
+      db.authenticate(user, pass, function(pass, info) {
         if (pass) {
           req.session.auth = true;
+          req.session.id = info.id;
           res.redirect('/');
           return;
         }
